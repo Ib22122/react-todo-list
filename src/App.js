@@ -10,10 +10,12 @@ function App() {
 
   const add = () => {
     const value = inputRef.current.value
-    const newData = { completed: false, value }
+    console.log(value);
+    if (value !=="") {
+      const newData = { completed: false, value }
     setx([...x, newData])
-
     inputRef.current.value = ""
+    }
   }
 
   const toDelete = (index) => {
